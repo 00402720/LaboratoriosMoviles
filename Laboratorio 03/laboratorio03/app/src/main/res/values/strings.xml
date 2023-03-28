@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">laboratorio03</string>
+    <string name="title_text_view">Cantidad de Dinero</string>
+    <string name="money_count_text_view">0</string>
+    <string name="five_cents_text_view">$0.05</string>
+    <string name="dime_text_view">$0.10</string>
+    <string name="quarter_text_view">$0.25</string>
+    <string name="dollar_text_view">$1.00</string>
+    <string name="five_cents_coin_image_description">five cents coin</string>
+    <string name="ten_cents_coin_image_description">ten cents coin</string>
+    <string name="twenty_five_cents_coin_image_description">twenty five cents coin</string>
+    <string name="one_dollar_coin_image_description">one dollar coin</string>
+</resources>
