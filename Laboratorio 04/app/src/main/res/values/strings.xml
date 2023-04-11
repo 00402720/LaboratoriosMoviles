@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Labo04</string>
+    <string name="prompt_text_view">Rellena la siguiente información</string>
+    <string name="name_input_text">Nombre Completo</string>
+    <string name="email_input_text">Correo Electronico</string>
+    <string name="number_input_text">Numero de Telefono</string>
+    <string name="save_action">GUARDAR</string>
+    <string name="prompt_confirmation_text_view">Confirma tu información</string>
+</resources>
