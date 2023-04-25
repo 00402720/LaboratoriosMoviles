@@ -11,4 +11,7 @@
     <string name="new_movie">New Movie</string>
     <string name="input_field_name">Nombre</string>
     <string name="cat_input_field">Categoria</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="clasificacion">Clasificacion</string>
+    <string name="submit_action">Submit</string>
 </resources>

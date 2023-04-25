@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.billboardFragment"
+    tools:context=".ui.movie.billboardFragment"
     android:background="@color/backgroundLayout">
 
     <!-- TODO: Update blank fragment layout -->
@@ -143,7 +143,7 @@
         android:backgroundTint="@color/buttonColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-    </com.google.android.material.floatingactionbutton.FloatingActionButton
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
     
 
 </androidx.constraintlayout.widget.ConstraintLayout>

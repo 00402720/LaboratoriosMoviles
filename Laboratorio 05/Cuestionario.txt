@@ -1,0 +1,8 @@
+¿En qué consiste el patrón de diseño Repository?
+
+Es un patrón de diseño que aísla la capa de datos de el resto de la aplicación, lo que permite realizar pruebas de la aplicación separado de los datos.
+
+
+ ¿Qué es el ViewModel?
+
+Es un patrón de arquitectura de software que se caracteriza por tratar de desacoplar lo máximo posible la interfaz de usuario de la lógica de la aplicación. Su función es comunicar la capa de repositorio con model.

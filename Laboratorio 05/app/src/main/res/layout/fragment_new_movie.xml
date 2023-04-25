@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.newMovieFragment"
+    tools:context=".ui.movie.NewMovieFragment"
     android:background="@color/backgroundLayout">
 
     <TextView
@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="@string/new_movie"
         android:textColor="@color/white"
-        android:textSize="@dimen/title_text_size" />
+        android:textSize="@dimen/title_text_size"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/name_card"
@@ -28,7 +28,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/input_field_name"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -43,8 +44,57 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="@string/cat_input_field"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
     </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/description_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/category_card"
+        android:backgroundTint="@color/cardLayout"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/descripcion"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/clasification_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/description_card"
+        android:backgroundTint="@color/cardLayout"
+        android:layout_margin="5dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/clasificacion"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit_action"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clasification_card"
+        android:backgroundTint="@color/buttonColor" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
