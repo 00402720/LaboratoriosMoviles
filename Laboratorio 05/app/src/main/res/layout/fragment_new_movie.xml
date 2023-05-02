@@ -1,100 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.movie.NewMovieFragment"
-    android:background="@color/backgroundLayout">
+    tools:context=".ui.movie.NewMovieFragment">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.labo05.ui.movie.MovieViewModel" />
+    </data>
 
-    <TextView
-        android:id="@+id/textView2"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/new_movie"
-        android:textColor="@color/white"
-        android:textSize="@dimen/title_text_size"/>
+        android:layout_height="match_parent"
+        android:background="@color/backgroundLayout">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/name_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        android:backgroundTint="@color/cardLayout"
-        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/new_movie"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_text_size"/>
 
-        <com.google.android.material.textfield.TextInputEditText
+        <androidx.cardview.widget.CardView
+            android:id="@+id/name_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            android:backgroundTint="@color/cardLayout"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.name}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/category_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/name_card"
+            android:backgroundTint="@color/cardLayout"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.category"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/description_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/category_card"
+            android:backgroundTint="@color/cardLayout"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.description}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qualification_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/description_card"
+            android:backgroundTint="@color/cardLayout"
+            android:layout_margin="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@={viewmodel.qualification}"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button"
+            android:onClick="@{() -> viewmodel.createMovie()}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/input_field_name"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/category_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/name_card"
-        android:backgroundTint="@color/cardLayout"
-        android:layout_margin="5dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/cat_input_field"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
-    </androidx.cardview.widget.CardView>
+            android:text="@string/submit_action"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/qualification_card"
+            android:backgroundTint="@color/buttonColor" />
 
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/description_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/category_card"
-        android:backgroundTint="@color/cardLayout"
-        android:layout_margin="5dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/descripcion"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/clasification_card"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/description_card"
-        android:backgroundTint="@color/cardLayout"
-        android:layout_margin="5dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/clasificacion"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"/>
-    </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/submit_action"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clasification_card"
-        android:backgroundTint="@color/buttonColor" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

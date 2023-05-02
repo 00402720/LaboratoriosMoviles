@@ -6,14 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.labo05.R
+import com.example.labo05.databinding.FragmentNewMovieBinding
 
 class NewMovieFragment : Fragment() {
 
+    private lateinit var binding: FragmentNewMovieBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_new_movie, container, false)
+        binding = FragmentNewMovieBinding.inflate(inflater, container, false)
+        return binding.root
     }
 }
