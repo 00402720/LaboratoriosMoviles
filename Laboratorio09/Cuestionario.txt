@@ -1,0 +1,22 @@
+¿Cuál es el propósito y el uso de la función async en las coroutines?
+
+Una coroutine es una estructura de programación asincrónica que permite la ejecución concurrente de tareas sin necesidad de crear hilos adicionales, lo que permite una mejor utilización de los recursos del sistema.
+Las coroutines se basan en el concepto de suspensión y reanudación de tareas. Una coroutine puede suspender su ejecución en un punto determinado sin bloquear el hilo en el que se está ejecutando, lo que permite que otro trabajo se ejecute en ese hilo. Cuando la tarea suspendida se reanuda, puede continuar desde donde se detuvo.
+
+
+
+¿Cuál es la importancia de la suspensión en las coroutines y cómo se
+implementa?
+
+La suspension de coroutines es importante ya que permiten que se puedan manejar diferentes trabajos sobre el mismo hilo, y que al suspender uno de ellos pueda dar paso a los demás trabajos que se encuentran sobre el mismo hilo, la acción de suspender trabajos permite que el manejo del hilo se vuelva mas eficiente.
+
+
+ ¿Cuál es el propósito del Dispatcher en las coroutines y cómo se elige
+uno adecuado para cada tarea?
+
+El Dispatcher en las coroutines de Kotlin es responsable de especificar en qué hilo o pool de hilos se ejecutará una coroutine. Su propósito es administrar la asignación de tareas y garantizar que las coroutines se ejecuten en el contexto apropiado.
+
+
+ ¿Cuál es el propósito y el uso de la función async en las coroutines?
+
+La función async en las coroutines de Kotlin se utiliza para realizar tareas de forma asíncrona y obtener los resultados de manera eficiente. Su propósito principal es permitir la ejecución concurrente de múltiples tareas y combinar sus resultados de manera conveniente.
